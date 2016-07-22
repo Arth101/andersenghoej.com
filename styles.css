@@ -228,6 +228,24 @@ footer {
 	display: none;
 }
 
+.overlay {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 128, 128, 0.95);
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 50px;
+}
+
+.close-overlay {
+	position: fixed;
+  right: 50px;
+  top: 50px;
+	cursor: pointer;
+}
+
 @media (max-width: 1330px) {
 	.about p {
 		font-size: 0.3em;
