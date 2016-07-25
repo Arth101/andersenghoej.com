@@ -21,11 +21,12 @@
    </head>
 
    <body>
+    <div class="container">
      <nav>
-       <div class="container">
-         <h1>Anders Enghøj</h1>
-       </div>
+       <h2>Anders Enghøj | Web Developer</h2>
      </nav>
+    </div>
+
      <div class="container">
        <ul class="flex-container">
 
@@ -57,7 +58,7 @@
           </li>
 
           <li class="flex-item" style="background-image: url('images/the2ndedit.jpg')">
-            <a href="http://dev.the2ndedit.com/" target="_blank">
+            <a id="plz" href="http://the2ndedit.com/" target="_blank" onclick="return false">
               <span>
                 <h3>The 2nd Edit</h3>
               </span>
@@ -65,7 +66,7 @@
           </li>
 
             <li class="flex-item" style="background-image: url('images/maerkelex.svg')">
-              <a href="http://maerkelex.dk/" target="_blank">
+              <a onclick="openOverlay('maerkelex');">
                 <span>
                   <h3>Mærkelex.dk</h3>
                 </span>
@@ -121,17 +122,58 @@
      </div>
 
      <div class="overlay">
-       <div class="close-overlay">
+       <div class="close-overlay" onclick="closeOverlay()">
          <i class="fa fa-times fa-2x" aria-hidden="true"></i>
        </div>
-       <h1>plllzzz</h1>
+       <div class="content">
+         <div class="col" style="width: 100%;">
+           <h1>The 2nd Edit</h1>
+           <h4>Frontend Development, Paid Job</h4>
+         </div>
+         <div class="col">
+           <p>THE 2nd EDIT is a platform that allows for sale of "second-hand" designer fashion, where they validate and check the quality and geniounity of all products.</p>
+           <p>The 2nd Edit needed a new web-based selling platform, where users could sell their own products throught the company. That required a lot of user inputs and a good flow through the product flow. We made the platform's frontend using React.js, and I've got great experience using that framework.</p>
+           <div style="text-align:center;">
+             <a class="btn" href="www.google.dk">
+               Visit Page
+             </a>
+           </div>
+         </div>
+         <div class="col">
+           <img src="images/the2ndedit.jpg" />
+         </div>
+       </div>
      </div>
 
-     <footer>
-       <div class="container">
-        © 2016 Anders Enghøj, All rights reserved.
+     <div id="maerkelex-overlay" class="overlay">
+       <div class="close-overlay" onclick="closeOverlay()">
+         <i class="fa fa-times fa-2x" aria-hidden="true"></i>
        </div>
-     </footer>
+       <div class="content">
+         <div class="col" style="width: 100%;">
+           <h1>Mærkelex.dk</h1>
+           <h4>General Development, Startup</h4>
+         </div>
+         <div class="col">
+           <p>THE 2nd EDIT is a platform that allows for sale of "second-hand" designer fashion, where they validate and check the quality and geniounity of all products.</p>
+           <p>The 2nd Edit needed a new web-based selling platform, where users could sell their own products throught the company. That required a lot of user inputs and a good flow through the product flow. We made the platform's frontend using React.js, and I've got great experience using that framework.</p>
+           <div style="text-align:center;">
+             <a class="btn" href="www.google.dk">
+               Visit Page
+             </a>
+           </div>
+         </div>
+         <div class="col">
+           <img src="images/the2ndedit.jpg" />
+         </div>
+       </div>
+     </div>
+
+     <div class="container">
+      <footer>
+        © 2016 Anders Enghøj, All rights reserved.
+      </footer>
+     </div>
 
      <script src="script.js"></script>
    </body>
