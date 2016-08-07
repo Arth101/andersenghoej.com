@@ -58,9 +58,10 @@
           </li>
 
           <li class="flex-item" style="background-image: url('images/the2ndedit.jpg')">
-            <a id="plz" href="http://the2ndedit.com/" target="_blank" onclick="return false">
+            <a onclick="openOverlay('the2ndedit');">
               <span>
                 <h3>The 2nd Edit</h3>
+                <p>Webshop</p>
               </span>
             </a>
           </li>
@@ -69,14 +70,16 @@
               <a onclick="openOverlay('maerkelex');">
                 <span>
                   <h3>Mærkelex.dk</h3>
+                  <p>Scouting badge catalog</p>
                 </span>
               </a>
             </li>
 
-            <li class="flex-item" style="background-image: url('images/parkour.jpg')">
-              <a href="http://greveparkour.dk/" target="_blank">
+            <li class="flex-item" style="background-image: url('images/njord.jpg')">
+              <a onclick="openOverlay('greveparkour');">
                 <span>
-                  <h3>Greve Parkour</h3>
+                  <h3>NJORD</h3>
+                  <p>Webshop</p>
                 </span>
               </a>
             </li>
@@ -88,6 +91,30 @@
                 Photoshopping and manipulating people
               </p>
             </span>
+          </li>
+
+          <li class="flex-item" style="background-image: url('images/yacc.png')">
+            <a href="http://www.yacc.io/" target="_blank">
+              <span>
+                <h3>YACC.io</h3>
+              </span>
+            </a>
+          </li>
+
+          <li class="flex-item" style="background-image: url('images/parkour.jpg')">
+            <a onclick="openOverlay('greveparkour');">
+              <span>
+                <h3>Greve Parkour</h3>
+              </span>
+            </a>
+          </li>
+
+          <li class="flex-item" style="background-image: url('images/kampfly.jpg')">
+            <a href="http://harvikampfly.dk/" target="_blank">
+              <span>
+                <h3>harvikampfly.dk</h3>
+              </span>
+            </a>
           </li>
 
           <li class="flex-item" style="background-image: url('images/stronggeeks.jpg')">
@@ -121,50 +148,65 @@
         </ul>
      </div>
 
-     <div class="overlay">
+     <div id="the2ndedit-overlay" class="overlay" style="background-image:url('images/the2ndedit.jpg')">
        <div class="close-overlay" onclick="closeOverlay()">
          <i class="fa fa-times fa-2x" aria-hidden="true"></i>
        </div>
        <div class="content">
-         <div class="col" style="width: 100%;">
+         <div style="width: 100%;">
            <h1>The 2nd Edit</h1>
            <h4>Frontend Development, Paid Job</h4>
          </div>
-         <div class="col">
+         <div>
            <p>THE 2nd EDIT is a platform that allows for sale of "second-hand" designer fashion, where they validate and check the quality and geniounity of all products.</p>
            <p>The 2nd Edit needed a new web-based selling platform, where users could sell their own products throught the company. That required a lot of user inputs and a good flow through the product flow. We made the platform's frontend using React.js, and I've got great experience using that framework.</p>
            <div style="text-align:center;">
-             <a class="btn" href="www.google.dk">
+             <a class="btn" href="https://www.the2ndedit.com/">
                Visit Page
              </a>
            </div>
-         </div>
-         <div class="col">
-           <img src="images/the2ndedit.jpg" />
          </div>
        </div>
      </div>
 
-     <div id="maerkelex-overlay" class="overlay">
+     <div id="maerkelex-overlay" class="overlay" style="background-image:url('images/maerkelex.jpg')">
        <div class="close-overlay" onclick="closeOverlay()">
          <i class="fa fa-times fa-2x" aria-hidden="true"></i>
        </div>
        <div class="content">
-         <div class="col" style="width: 100%;">
+         <div style="width: 100%;">
            <h1>Mærkelex.dk</h1>
            <h4>General Development, Startup</h4>
          </div>
-         <div class="col">
+         <div>
            <p>THE 2nd EDIT is a platform that allows for sale of "second-hand" designer fashion, where they validate and check the quality and geniounity of all products.</p>
            <p>The 2nd Edit needed a new web-based selling platform, where users could sell their own products throught the company. That required a lot of user inputs and a good flow through the product flow. We made the platform's frontend using React.js, and I've got great experience using that framework.</p>
            <div style="text-align:center;">
-             <a class="btn" href="www.google.dk">
+             <a class="btn" href="https://www.maerkelex.com/">
                Visit Page
              </a>
            </div>
          </div>
-         <div class="col">
-           <img src="images/the2ndedit.jpg" />
+       </div>
+     </div>
+
+     <div id="greveparkour-overlay" class="overlay" style="background-image:url('images/greveparkour.jpg')">
+       <div class="close-overlay" onclick="closeOverlay()">
+         <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+       </div>
+       <div class="content">
+         <div style="width: 100%;">
+           <h1>Greve Parkour</h1>
+           <h4>General Development, Spare time stuff</h4>
+         </div>
+         <div>
+           <p>THE 2nd EDIT is a platform that allows for sale of "second-hand" designer fashion, where they validate and check the quality and geniounity of all products.</p>
+           <p>The 2nd Edit needed a new web-based selling platform, where users could sell their own products throught the company. That required a lot of user inputs and a good flow through the product flow. We made the platform's frontend using React.js, and I've got great experience using that framework.</p>
+           <div style="text-align:center;">
+             <a class="btn" href="http://greveparkour.dk/">
+               Visit Page
+             </a>
+           </div>
          </div>
        </div>
      </div>

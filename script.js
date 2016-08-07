@@ -1,10 +1,5 @@
 console.log("eyy world");
 
-document.querySelector("#plz").addEventListener("click", function() {
-  console.log("clicked next");
-  document.querySelector(".overlay").className += " overlayShow";
-});
-
 function closeOverlay() {
   console.log("work plz");
   var crosses = document.querySelectorAll(".overlay");
@@ -18,3 +13,10 @@ function openOverlay(id) {
   console.log("clicked!!!");
   document.querySelector("#" + id + "-overlay").className += " overlayShow";
 };
+
+window.onkeydown = function(evt) {
+  evt = evt || window.event;
+   if (event.keyCode == 27) {
+      closeOverlay();
+   }
+}
