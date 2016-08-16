@@ -1,0 +1,97 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav,
+footer {
+  background: #073642;
+  padding: 20px;
+  color: white;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+nav h2 {
+  margin: 0;
+}
+
+.container {
+  margin: 0 5px;
+	text-align: center;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-start;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.flex-item {
+  width: 25%;
+  height: 25vw;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+	border: 0px solid white;
+  text-align: center;
+  box-sizing: border-box;
+	position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+	background-position: center;
+  transition: all 0.5s;
+}
+
+@media(max-width: 900px){
+  .flex-item {
+    width: 50%;
+    height: 50vw;
+    font-size: 2em;
+  }
+}
+
+.flex-item.large {
+  width: 50%;
+  font-size: 3em;
+}
+
+@media(max-width: 900px){
+  .flex-item.large {
+    width: 100%;
+  }
+}
+
+.flex-img {
+  background: teal;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
