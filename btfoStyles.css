@@ -7,15 +7,24 @@ body {
 }
 
 nav,
-footer {
+footer,
+.divider {
   background: #073642;
   padding: 20px;
   color: white;
   margin: 5px;
+}
+
+nav {
   margin-top: 10px;
 }
 
-nav h2 {
+footer {
+  margin-bottom: 10px;
+}
+
+nav h2,
+.divider h2 {
   margin: 0;
 }
 
@@ -67,31 +76,116 @@ nav h2 {
   transition: all 0.5s;
 }
 
-@media(max-width: 900px){
+@media(max-width: 1100px){
   .flex-item {
     width: 50%;
     height: 50vw;
-    font-size: 2em;
+    font-size: 6.5vw;
   }
 }
 
 .flex-item.large {
   width: 50%;
-  font-size: 3em;
 }
 
-@media(max-width: 900px){
+@media(max-width: 1100px){
   .flex-item.large {
     width: 100%;
   }
 }
 
 .flex-img {
-  background: teal;
+  background: rgba(18,82,151,1);
+  background: -moz-linear-gradient(45deg, rgba(18,82,151,1) 0%, rgba(63,151,233,1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(18,82,151,1)), color-stop(100%, rgba(63,151,233,1)));
+  background: -webkit-linear-gradient(45deg, rgba(18,82,151,1) 0%, rgba(63,151,233,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(18,82,151,1) 0%, rgba(63,151,233,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(18,82,151,1) 0%, rgba(63,151,233,1) 100%);
+  background: linear-gradient(45deg, rgba(18,82,151,1) 0%, rgba(63,151,233,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#125297', endColorstr='#3f97e9', GradientType=1 );
   height: 100%;
   width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.flex-img p span {
+  display: block;
+  font-size: 0.5em;
+  font-weight: 300;
+}
+
+.category {
+  text-transform: capitalize;
+  font-size: 1.2em;
+}
+
+#interest {
+  flex-direction: row-reverse;
+}
+
+.flex-img .valign {
+	font-size: 16px;
+	box-sizing: border-box;
+	position: absolute;
+	padding: 15px;
+	background: rgba(0, 0, 0, 0.9);
+	color: white;
+	width: 100%;
+	top: auto;
+	bottom: 0px;
+  left: 0;
+	opacity: 0;
+	transform: translateY(100%);
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	line-height: 1.5em;
+	height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.flex-img:hover .valign {
+	opacity: 1;
+	transform: translateY(0px);
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+.flex-img .valign p {
+  font-weight: 300;
+  display: block;
+}
+
+.flex-img .valign strong {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.flex-img .valign a {
+	cursor: pointer;
+	display: block;
+  width: 100%;
+	font-size: 1em;
+}
+
+.flex-img .valign a i {
+  transition: opacity 0.35s, transform 0.35s;
+  background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border-radius: 50%;
+	padding: 20px;
+  opacity: 0.8;
+}
+
+.flex-img .valign a i:hover {
+  opacity: 1.0;
 }
