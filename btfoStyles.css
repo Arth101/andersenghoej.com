@@ -116,7 +116,7 @@ nav h2,
   position: relative;
 }
 
-.flex-img p span {
+.flex-img .subtitle {
   display: block;
   font-size: 0.5em;
   font-weight: 300;
@@ -135,7 +135,7 @@ nav h2,
 	font-size: 16px;
 	box-sizing: border-box;
 	position: absolute;
-	padding: 15px;
+	padding: 20px;
 	background: rgba(0, 0, 0, 0.9);
 	color: white;
 	width: 100%;
@@ -178,14 +178,21 @@ nav h2,
 }
 
 .flex-img .valign a i {
+  margin-top: 10px;
   transition: opacity 0.35s, transform 0.35s;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
 	color: white;
 	border-radius: 50%;
-	padding: 20px;
+	padding: 15px;
   opacity: 0.8;
 }
 
 .flex-img .valign a i:hover {
   opacity: 1.0;
+}
+
+@media(max-width: 1100px){
+  .valign-text {
+    display: none;
+  }
 }

@@ -23,74 +23,73 @@ window.onkeydown = function(evt) {
 
 var boxes = [
   {
-    "name" : "",
     "id" : "me",
     "type" : "personal",
     "size" : "small",
-    "text" : "",
-    "image" : "linkedin.jpg",
-    "link" : "www.google.dk"
+    "text" : "Name: Anders Enghøj<br />Age: 25<br />Residence: Copenhagen",
+    "image" : "linkedin.jpg"
   },
   {
     "name" : "Yacc.io",
     "id" : "yacc",
     "type" : "personal",
     "size" : "small",
-    "text" : "Current Employer",
+    "subtitle" : "Current Employer",
+    "text" : "My current employer, Yacc.io, is a recent IT startup. I work as the primary frontend developer, SEO König and designer.",
     "image" : "yacc.png",
-    "link" : "www.google.dk"
+    "link" : "http://www.yacc.io/"
   },
   {
     "name" : "Web Developer,<br />Multimedia Designer",
     "id" : "education",
     "type" : "personal",
     "size" : "large",
-    "text" : "Skills & Education",
-    "color" : "rgba(18,82,151,1)",
-    "link" : "www.google.dk"
+    "subtitle" : "Skills & Education",
+    "text" : "As a bachelor of Web Development I have learned how to undertake the design and construction of web applications of all sizes. I have been working creatively with coding, creating realistic projects while refining my development and programming skills to a professional level.<br /><br />HTML | CSS | JavaScript | React.js | node.js",
+    "color" : "rgba(18,82,151,1)"
   },
   {
     "name" : "The 2nd Edit",
     "id" : "the2ndedit",
     "type" : "job",
     "size" : "small",
-    "text" : "Webshop",
+    "subtitle" : "Webshop",
     "image" : "2ndEdit.png",
-    "link" : "www.google.dk"
+    "link" : "http://www.the2ndedit.com/"
   },
   {
     "name" : "Mærke&#173;lex",
     "id" : "maerkelex",
     "type" : "job",
     "size" : "small",
-    "text" : "Scouting badge catalog",
+    "subtitle" : "Scouting badge catalog",
     "image" : "maerkelex.svg",
-    "link" : "www.google.dk"
+    "link" : "http://maerkelex.dk/"
   },
   {
     "name" : "NJORD",
     "id" : "njord",
     "type" : "job",
     "size" : "small",
-    "text" : "Wordpress webshop",
+    "subtitle" : "Wordpress webshop",
     "image" : "njord.jpg",
-    "link" : "www.google.dk"
+    "link" : "http://www.mynjord.com/"
   },
   {
     "name" : "Greve Parkour",
     "id" : "greveparkour",
     "type" : "interest",
     "size" : "small",
-    "text" : "Anders Enghøj",
+    "subtitle" : "Anders Enghøj",
     "image" : "parkour.jpg",
-    "link" : "www.google.dk"
+    "link" : "http://greveparkour.dk/"
   },
   {
     "name" : "harvi&#173;kampfly.dk",
     "id" : "kampfly",
     "type" : "interest",
     "size" : "small",
-    "text" : "Anders Enghøj",
+    "subtitle" : "Anders Enghøj",
     "image" : "kampfly.jpg",
     "link" : "http://harvikampfly.dk/"
   },
@@ -99,9 +98,8 @@ var boxes = [
     "id" : "stronggeeks",
     "type" : "interest",
     "size" : "small",
-    "text" : "We had a lot of fun",
-    "image" : "stronggeeks.jpg",
-    "link" : "www.google.dk"
+    "subtitle" : "We had a lot of fun",
+    "image" : "stronggeeks.jpg"
   }
 ]
 
@@ -117,7 +115,20 @@ boxes.forEach(function(box) {
     boxImage = "background-image: url(images/" + box.image + ")";
   };
 
-  div.innerHTML = '<div class="flex-img" id="' + box.id + '" style="' + boxImage + '"><p>' + box.name + '<span>' + box.text + '</span></p><div class="valign"><p><strong>' + box.name +'</strong>' + box.text +'<a href="' + box.link + '"><i class="material-icons links">link</i></a></p></div></div>';
+  if(box.name == null){
+    box.name = "";
+  }
+
+  if(box.subtitle == null){
+    box.subtitle = "";
+  }
+
+  var link = "";
+  if(box.link != null){
+    link = '<a href="' + box.link + '"><i class="material-icons links">link</i></a>'
+  }
+
+  div.innerHTML = '<div class="flex-img" id="' + box.id + '" style="' + boxImage + '"><p>' + box.name + '<span class="subtitle">' + box.subtitle + '</span></p><div class="valign"><p><strong>' + box.name +'</strong><span class="valign-text">' + box.text + '</span>' + link + '</p></div></div>';
 
   if(box.type == "personal"){
     document.querySelector('#personal').appendChild(div);
