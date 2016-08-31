@@ -26,7 +26,7 @@ var boxes = [
     "id" : "me",
     "type" : "personal",
     "size" : "small",
-    "text" : "Name: Anders Enghøj<br />Age: 25<br />Residence: Copenhagen",
+    "description" : "Name: Anders Enghøj<br />Age: 25<br />Residence: Copenhagen",
     "image" : "linkedin.jpg"
   },
   {
@@ -35,7 +35,7 @@ var boxes = [
     "type" : "personal",
     "size" : "small",
     "subtitle" : "Current Employer",
-    "text" : "My current employer, Yacc.io, is a recent IT startup. I work as the primary frontend developer, SEO König and designer.",
+    "description" : "My current employer, Yacc.io, is a recent IT startup. I work as the primary frontend developer, SEO König and designer.",
     "image" : "yacc.png",
     "link" : "http://www.yacc.io/"
   },
@@ -45,7 +45,7 @@ var boxes = [
     "type" : "personal",
     "size" : "large",
     "subtitle" : "Skills & Education",
-    "text" : "As a bachelor of Web Development I have learned how to undertake the design and construction of web applications of all sizes. I have been working creatively with coding, creating realistic projects while refining my development and programming skills to a professional level.<br /><br />HTML | CSS | JavaScript | React.js | node.js",
+    "description" : "As a bachelor of Web Development I have learned how to undertake the design and construction of web applications of all sizes. I have been working creatively with coding, creating realistic projects while refining my development and programming skills to a professional level.<br /><br />HTML | CSS | JavaScript | React.js | node.js",
     "color" : "rgba(18,82,151,1)"
   },
   {
@@ -54,6 +54,7 @@ var boxes = [
     "type" : "job",
     "size" : "small",
     "subtitle" : "Webshop",
+    "description" : "The 2nd Edit is a secondhand webstore for luxury and designer clothes. We made a webshop for them!",
     "image" : "2ndEdit.png",
     "link" : "http://www.the2ndedit.com/"
   },
@@ -64,7 +65,8 @@ var boxes = [
     "size" : "small",
     "subtitle" : "Scouting badge catalog",
     "image" : "maerkelex.svg",
-    "link" : "http://maerkelex.dk/"
+    "link" : "http://maerkelex.dk/",
+    "repo" : "https://github.com/hypesystem/maerkelex.dk"
   },
   {
     "name" : "NJORD",
@@ -91,7 +93,8 @@ var boxes = [
     "size" : "small",
     "subtitle" : "Anders Enghøj",
     "image" : "kampfly.jpg",
-    "link" : "http://harvikampfly.dk/"
+    "link" : "http://harvikampfly.dk/",
+    "repo" : "https://github.com/Arth101/harvikampfly.dk"
   },
   {
     "name" : "Strong Geeks",
@@ -124,11 +127,15 @@ boxes.forEach(function(box) {
   }
 
   var link = "";
+  var repo = "";
   if(box.link != null){
-    link = '<a href="' + box.link + '"><i class="material-icons links">link</i></a>'
+    link = '<a href="' + box.link + '" target="_blank"><i class="fa fa-link links" aria-hidden="true"></i></a>';
+  }
+  if(box.repo != null){
+    repo = '<a href="' + box.repo + '" target="_blank"><i class="fa fa-github links" aria-hidden="true"></i></a>';
   }
 
-  div.innerHTML = '<div class="flex-img" id="' + box.id + '" style="' + boxImage + '"><p>' + box.name + '<span class="subtitle">' + box.subtitle + '</span></p><div class="valign"><p><strong>' + box.name +'</strong><span class="valign-text">' + box.text + '</span>' + link + '</p></div></div>';
+  div.innerHTML = '<div class="flex-img" id="' + box.id + '" style="' + boxImage + '"><p>' + box.name + '<span class="subtitle">' + box.subtitle + '</span></p><div class="valign"><p><strong>' + box.name +'</strong><span class="valign-text">' + box.description + '</span>' + link + repo + '</p></div></div>';
 
   if(box.type == "personal"){
     document.querySelector('#personal').appendChild(div);

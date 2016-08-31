@@ -171,10 +171,10 @@ nav h2,
 }
 
 .flex-img .valign a {
+  margin: 0 5px;
 	cursor: pointer;
-	display: block;
-  width: 100%;
-	font-size: 1em;
+	display: inline-block;
+	font-size: 1.5em;
 }
 
 .flex-img .valign a i {
@@ -189,6 +189,10 @@ nav h2,
 
 .flex-img .valign a i:hover {
   opacity: 1.0;
+}
+
+.valign-text {
+  display: block;
 }
 
 @media(max-width: 1100px){
