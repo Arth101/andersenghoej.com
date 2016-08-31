@@ -6,6 +6,16 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 nav,
 footer,
 .divider {
@@ -198,5 +208,67 @@ nav h2,
 @media(max-width: 1100px){
   .valign-text {
     display: none;
+  }
+}
+
+.social-img i.fa {
+  font-size: 3em;
+}
+
+.social-links {
+  height: 100%;
+  width: 100%;
+}
+
+.social-img {
+  color: white;
+  background-position: center !important;
+  background-size: cover !important;
+  transition: all 0.3s ease;
+}
+
+.social-img:hover {
+  opacity: .8;
+}
+
+#twitter {
+  background: #55acee;
+}
+
+#twitter:hover {
+  background-image: url(images/twitter.jpg);
+}
+
+#facebook {
+  background: #3b5998;
+}
+
+#facebook:hover {
+  background-image: url(images/facebook.jpg);
+}
+
+#linkedin {
+  background: #0077B5;
+}
+
+#linkedin:hover {
+  background-image: url(images/linkedin.jpg);
+}
+
+#github {
+  background: #4A4A4A;
+}
+
+#github:hover {
+  background-image: url(images/github.jpg);
+}
+
+@media(max-width: 1100px){
+  .tiny {
+    width: 25%;
+    height: 25vw;
+  }
+  .tiny .social-img i.fa {
+    font-size: 2em;
   }
 }
